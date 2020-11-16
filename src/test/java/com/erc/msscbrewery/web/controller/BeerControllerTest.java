@@ -1,5 +1,6 @@
 package com.erc.msscbrewery.web.controller;
 
+import com.erc.msscbrewery.web.controller.v2.BeerControllerV2;
 import com.erc.msscbrewery.web.model.BeerDto;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
@@ -13,7 +14,7 @@ import java.util.UUID;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(BeerController.class)
+@WebMvcTest(BeerControllerV2.class)
 class BeerControllerTest {
 
     @Autowired
