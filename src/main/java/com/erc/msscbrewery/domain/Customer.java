@@ -1,24 +1,24 @@
 package com.erc.msscbrewery.domain;
 
-import com.erc.msscbrewery.web.model.v2.BeerStyleEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.UUID;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Beer {
+public class Customer {
 
     private UUID id;
-    private String beerName;
-    private BeerStyleEnum beerStyle;
-    private Long upc;
 
-
+    @NotBlank
+    @Size(min = 3, max = 100)
+    private String customerName;
 
 }
